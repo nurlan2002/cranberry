@@ -1,0 +1,130 @@
+.product {
+    border: 1px solid #9F9FA1;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    -moz-transform: translateZ(0);
+    transform: translateZ(5);
+    -webkit-transform: translateZ(0);
+    -moz-transition: box-shadow .4s ease-in-out, border-radius .4s ease-in-out;
+    transition: box-shadow .4s ease-in-out, border-radius .4s ease-in-out;
+    -webkit-transition: box-shadow .4s ease-in-out, border-radius .4s ease-in-out;
+}
+
+.product:hover {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+}
+
+.product:hover .product__button {
+    bottom: 15px;
+    opacity: 1;
+}
+
+.product__hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.product__button {
+    position: absolute;
+    bottom: -50px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 30px);
+    margin: 0 15px;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.6rem;
+    opacity: 0;
+    transition: 1s;
+    color: #313131;
+}
+
+.product:hover .product__add {
+    top: 15px;
+    opacity: 1;
+}
+
+.product__add {
+    position: absolute;
+    top: -50px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    width: fit-content;
+    cursor: pointer;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: 1s;
+}
+
+.product__add svg {
+    fill: #9D9D9D !important;
+}
+
+.product__add:hover svg {
+    fill: #960018 !important;
+}
+
+.product__wish {
+    right: 15px;
+    padding: 10px;
+    padding-bottom: 4px;
+}
+
+.product__cart {
+    left: 15px;
+    padding: 15px;
+    padding-top: 12px;
+    padding-bottom: 7px;
+}
+
+.product__pic {
+    width: 100%;
+}
+
+.product__title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #999A9C;
+    padding: 1.6rem 0;
+    font-weight: 500;
+}
+
+.product__price {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.HeartAnimation {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
+    background-repeat: no-repeat;
+    background-size: 2900%;
+    background-position: left;
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.animate {
+    animation: heart-burst .8s steps(28) forwards;
+}
+
+@keyframes heart-burst {
+    0% {
+        background-position: left
+    }
+
+    100% {
+        background-position: right
+    }
+}

@@ -1,0 +1,22 @@
+.checkout__header-titlesPart.four  {
+    width: calc(100% / 4);
+}
+
+@media only screen and (max-width: 600px) {
+    .checkout__header-titlesPart.four.price-label {
+        width: 100%
+    }
+
+    .checkout__header-titlesPart.four  {
+        width: 37.5%;
+    }
+
+    .checkout__header-titlesPart.four.delete-button {
+        width: calc(100% / 4);
+    }
+
+    .checkout__header-titlesPart.four * {
+        margin: 0 auto;
+        display: block;
+    }
+}

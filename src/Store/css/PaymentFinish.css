@@ -1,0 +1,29 @@
+.finished {
+    background-color: #E4E4E4;
+}
+
+.checkout__header-titlesPartsOne {
+    line-height: 35px;
+    font-size: 1.8rem;
+}
+
+.checkout__button.half-inverted  {
+    width: 30%;
+    border: 3px solid #0f0f0f;
+    background-color: #fff;
+    color: #0f0f0f;
+    margin-left: auto;
+    display: block;
+    margin-top: 45px;
+    min-width: fit-content;
+    padding: 0 20px;
+}
+
+.checkout__button.half-inverted:hover {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.checkout__button {
+    cursor: pointer;
+}

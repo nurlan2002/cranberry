@@ -1,0 +1,38 @@
+#rssBlock{
+    left:0px;
+    background: #080B13;
+  }
+  
+  /*remove p*/
+  .cnnContents {
+    width:100%;
+    padding: 10px 0;
+    margin:0 auto;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  
+  .marqueeStyle {
+    display:inline-block;
+    color: #fff;
+    /* Apply animation to this element */
+    -webkit-animation: scrolling-left1 20s linear infinite;
+    animation: scrolling-left1 15s linear infinite;
+  }
+  
+  
+  /* scrolling-left is continuous/repeatly text */
+  @keyframes scrolling-left1 {
+    0% {transform: translateX(100%);
+        -webkit-transform: translateX(100%);}
+    100% {transform: translateX(-100vw);
+        -webkit-transform: translateX(-100vw);}
+  }
+  
+  @-webkit-keyframes scrolling-left1 {
+      0% {-webkit-transform: translateX(100%);}
+        100% {-webkit-transform: translateX(-100%);}
+  }
+  

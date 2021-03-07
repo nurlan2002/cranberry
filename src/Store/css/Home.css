@@ -1,0 +1,115 @@
+.home {
+    padding-left: 5rem;
+}
+
+    .home__collection {
+        margin: 30px 0px;
+        background-color: #58AFBD;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        width: calc(100vw - 5rem);
+        position: relative;
+    }
+
+        .home__collection-model {
+            margin-right: auto;
+            margin-left: 60%;
+            margin-top: -4%;
+            margin-bottom: -3px;
+        }
+
+        .home__collection-text {
+            position: absolute;
+            left: 20%;
+            top: 25%;
+            font-family: "Playfair Display", 'Montserrat', sans-serif !important;
+        }
+
+        .home__collection-text-weak {
+            color: #A1D2DA;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .home__collection-text-strong {
+            color: #fff;
+            font-size: 5rem;
+            margin-bottom: 15px;
+            margin-top: -10px;
+            letter-spacing: 5px;
+        }
+
+        .home__collection-text-button {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 500;
+            background-color: #E23036;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .home__collection-date {
+            font-size: 6.75rem;
+            letter-spacing: 2px;
+        }
+
+.home-details {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    justify-content: space-evenly;
+}
+
+    .home-details-item {
+        display: flex;
+        font-size: 1.6rem;
+        align-items: center;
+        font-weight: 600;
+    }
+
+        .home-details-item-text {
+            padding-left: 25px;
+        }
+
+
+    @media only screen and (max-width: 600px) {
+        .home-details {
+            justify-content: flex-start;
+        }
+
+        .home {
+            padding-left: 3rem;
+        }
+
+        .home__collection {
+            width: calc(100vw - 3rem);
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .home__collection-text {
+            text-align: center;
+            padding-top: 60px;
+            position: initial;
+        }
+
+        .home__collection-model {
+            margin-left: 20%;
+            margin-bottom: -2px;
+        }
+    }
+
+    @media only screen and (max-width: 360px) {
+        .home__collection-text {
+            padding: 60px 0;
+        }
+
+        .home__collection-model {
+            display: none
+        }
+    }
