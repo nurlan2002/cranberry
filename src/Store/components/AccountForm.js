@@ -29,9 +29,6 @@ function AccountForm() {
     const [{ user }, dispatch] = useStateValue();
 
     useEffect(() => {
-        // if(user !== null) {
-        //     history.push("/");
-        // }
         import("../css/AccountForm.css");
         const switchers = [...document.querySelectorAll(".switcher")];
 

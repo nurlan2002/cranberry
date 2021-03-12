@@ -5,8 +5,6 @@ import { deleteDocument, set } from "../../firebase";
 function ProductItem({
     product,
     editPage,
-    brandList,
-    typeList,
     setUpdated,
     setLoading,
 }) {
@@ -26,6 +24,16 @@ function ProductItem({
         setLoading(false);
     };
 
+    const quantity = (array) => {
+        let num = 0;
+
+        array.forEach((el) => {
+            num += (parseInt(el.split(":")[1]) || 0)
+        })
+
+        return num
+    }
+
     return (
         <Table.Row key={product.id}>
             <Table.Cell>
@@ -38,16 +46,7 @@ function ProductItem({
             <Table.Cell textAlign="center">{product.category}</Table.Cell>
             <Table.Cell textAlign="center">
                 {
-                    product.sizes.length > 0
-                        ? Object.values(product.sizes).length != 0
-                            ? Object.values(product.sizes).length > 1 
-                                ? Object.values(product.sizes).reduce(
-                                    (a, b) =>
-                                        parseInt(a.split(":")[1]) +
-                                        parseInt(b.split(":")[1])
-                                ) : Object.values(product.sizes)[0]?.split(":")[1]
-                            : 0
-                        : 0
+                    product.sizes.length > 0 ? quantity(Object.values(product.sizes)) : 0
                 }
             </Table.Cell>
             <Table.Cell textAlign="center">{product.finalPrice}</Table.Cell>

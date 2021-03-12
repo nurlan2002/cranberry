@@ -267,12 +267,11 @@ function ProductDetails({
                 </Button>
             </Form>
 
-            <Header as="h1" dividing>
-                Available Sizes
-            </Header>
-
             {product && (
                 <>
+                    <Header as="h1" dividing>
+                        Available Sizes
+                    </Header>
                     <Segment loading={loading}>
                         <Grid>
                             <Grid.Row>

@@ -1,36 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { Route, useHistory } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import AdminNav from './components/AdminNav';
 import { Container, Dimmer, Loader, Segment } from 'semantic-ui-react';
 import ProductController from './components/ProductController';
 import ProductDetails from './components/ProductDetails';
-import { auth, get } from '../firebase'
-import { useStateValue } from '../StateProvider';
+import { get } from '../firebase'
 
 function Admin() {
     const url = "https://localhost:5001";
-    const history = useHistory();
 
-    const [activeItem, setActiveItem] = useState('Dashboard');
+    const [activeItem, setActiveItem] = useState('Products');
     const [product, setProduct] = useState(null);
     const [brandList, setBrandList] = useState([]);
     const [typeList, setTypeList] = useState([]);
     const [loading, setLoading] = useState(false);
-
-    const [{ user }, dispatch] = useStateValue();
 
     const handleItemClick = (e = null, { name }) => {
         setActiveItem(name);        
     }
 
     useEffect(() => {
-        // if(auth.currentUser === null) {
-        //     history.replace("/account");
-        // }
-        // else {
-            import('semantic-ui-css/semantic.min.css');
-        // }        
-    }, [user]);
+        import('semantic-ui-css/semantic.min.css');     
+        import('./Admin.css');     
+    }, []);
 
     useEffect(async () => {
         const brands = await get("brands");
